@@ -9,7 +9,7 @@ int main()
 
     bool boost = false;
 
-    float speed = 2.f;
+    float speed;
 
     sf::Color bgColour(64,64,64);
 
@@ -41,7 +41,9 @@ int main()
                     moveRight = true;
                 else if (event.key.code == sf::Keyboard::S)
                     moveDown = true;
-                else if (event.key.code == sf::Keyboard::LShift || event.key.code == sf::Keyboard::RShift)
+                else if (event.key.code == sf::Keyboard::LShift)
+                    boost = true;
+                else if (event.key.code == sf::Keyboard::RShift)
                     boost = true;
                 break;
 
